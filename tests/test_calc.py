@@ -1,10 +1,5 @@
-import sys
-import os
+from src import calc
 
-# Добавляем полный путь к папке src в sys.path
-sys.path.insert(0, '/Users/ira/PycharmProjects/ProjectAuto/src')
-
-import src.calc
 #ADD TESTS
 def test_add_positive_numbers():
     assert calc.add(2, 3) == 5
@@ -29,3 +24,27 @@ def test_subtract_negative_numbers():
 
 def test_subtract_mixed_numbers():
     assert calc.subtract(2, -3) == 5
+
+#MULTIPLY TESTS
+def test_multiply_positive_numbers():
+    assert calc.multiply(2, 3) == 6
+
+
+def test_multiply_negative_numbers():
+    assert calc.multiply(-2, -3) == 6
+
+
+def test_multiply_mixed_numbers():
+    assert calc.multiply(2, -3) == -6
+
+#DIVIDE TESTS
+def test_divide_positive_numbers():
+    assert calc.divide(3, 3) == 1
+
+
+def test_divide_negative_numbers():
+    assert calc.divide(-3, -3) == 1
+
+
+def test_divide_mixed_numbers():
+    assert calc.divide(3, -3) == -1
